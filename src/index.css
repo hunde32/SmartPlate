@@ -11,6 +11,7 @@ body{
   background: #343434;
   font-family: "DM Serif Text", serif;
   color: white;
+
 }
 /* HTML: <div class="loader"></div> */
 .loader {
@@ -151,13 +152,35 @@ body{
     max-width: 100%;
   }
 }
-
-
 .meal-card .ingredients{
+  cursor: pointer;
   color: rgba(0, 162, 255, 0.89);
+  animation: all 0.4s ease;
+}
+.meal-card .ingredients:hover{
+  text-decoration: underline;
 }
 .meal{
   display: grid;
   place-items: center;
+  position: relative;
   margin-bottom: 50px;
 }
+.no-meals{
+  font-size: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+}
+
+.recipe{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.688);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  padding: clamp(2rem, 0.5rem + 1vw, 1rem) 2rem;
+  transition: all 0.4s ease-in-out;
+}
+.recipe p{
+  font-size: 1.1rem;
+  color: white;
+}
+
+
