@@ -9,13 +9,14 @@ import Spinner from "../components/Spinner";
 
 const Home = () => {
   const [apiData, setApiData] = useState("");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState("")
   const [loding, setLoading] = useState(false);
   const [searchFound, setSearchFound] = useState(true);
   const APP_KEY = import.meta.env.VITE_EDAMAM_API_KEY;
   const APP_ID = import.meta.env.VITE_EDAMAM_API_ID;
   const [search, setSearch] = useState("");
   const [debounceSearchTerm, setDebounceSearchTerm] = useState("");
+  
   useDebounce(
     () => {
       !search || search === 0
