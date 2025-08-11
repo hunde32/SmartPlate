@@ -7,6 +7,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body{
   background: #343434;
   font-family: "DM Serif Text", serif;
@@ -166,6 +169,7 @@ body{
   justify-content: center;
   height: 100dvh;
   padding: 20rem;
+  overflow: hidden;
 }
 .ai-continer{
   width: 90%;
@@ -195,6 +199,10 @@ body{
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-bottom: 200px;
+}
+.prompt-answer-questions::-webkit-scrollbar{
+  display: none;
 }
 .user-prompt-continer{
   display: flex;
@@ -202,7 +210,10 @@ body{
   align-items: end;
 }
 .user-prompt-continer p, .ai-answer-continer p {
-  font-size: clamp(1rem, 0.375rem + 2vw, 1.5rem);
+  font-size: clamp(1rem, 0.375rem + 2vw, 1.3rem);
+}
+.markdown{
+  font-size: 20px;
 }
 .usr-icon{
   font-size: clamp(1.3rem, 1.05rem + 0.8vw, 1.5rem);
@@ -226,9 +237,9 @@ body{
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
-.send:hover, .mic:hover{
-  transform: translateY(-1.5px);
-  color: rgb(255, 102, 0);
+.send:active, .mic:active{
+  transform: translateY(2px);
+  color: rgba(255, 102, 0, 0.562);
 }
 
 @media (max-height: 800px) {
