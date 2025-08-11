@@ -3,6 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Spinner from "../components/Spinner"
 import MarkdownRenderer from "../components/MarkdownRenderer";
+import UserPrompt from "../components/UserPrompt";
 import {
   faPaperPlane,
   faMicrophone,
@@ -68,12 +69,11 @@ const Aiassistant = () => {
           {chatHistory.map((chat, index) => (
             <div key={index}>
               <div className="user-prompt-continer">
-                <FontAwesomeIcon icon={faCircleUser} className="usr-icon" />
-                <p>{chat.user}</p>
+                 <UserPrompt text={chat.user} />
               </div>
               <div className="ai-answer-continer">
                 <img src="logo.png" alt="logo"/>
-                {chat.ai ? <MarkdownRenderer className="markdown">{chat.ai}</MarkdownRenderer> : <Spinner/>}
+                {chat.ai ? <MarkdownRenderer>{chat.ai}</MarkdownRenderer> : <Spinner/>}
               </div>
             </div>
           ))}

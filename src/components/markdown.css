@@ -1,0 +1,87 @@
+/* src/components/markdown.css */
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=DM+Serif+Text:ital@0;1&family=Federo&display=swap');
+
+.markdown-body {
+  font-family: "DM Serif Text", serif;
+  line-height: 1.6;
+  color: white; 
+  background-color: #343434; 
+  word-wrap: break-word;
+  padding: 1rem;
+}
+
+.markdown-h1,
+.markdown-h2 {
+  
+  font-family: "Amarante", serif;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+  margin-top: 1.5em;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-h1 {
+  font-size: 2em;
+}
+
+.markdown-h2 {
+  font-size: 1.5em;
+}
+
+.markdown-p {
+  margin-bottom: 1em;
+}
+
+.markdown-ul,
+.markdown-ol {
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+
+.markdown-li {
+  margin-bottom: 0.5em;
+}
+
+.markdown-blockquote {
+  padding: 0 1em;
+  color: #a0a0a0;
+  border-left: 0.25em solid #dfe2e5;
+  margin: 1em 0;
+}
+pre {
+  background-color: #282c34;
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.9em;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.markdown-body code {
+  background-color: rgba(27, 31, 35, 0.05); 
+  color: #f78d03; 
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+  color: #fff; 
+}
+
+.markdown-th,
+.markdown-td {
+  border: 1px solid #666; 
+  padding: 8px 12px;
+}
+
+.markdown-th {
+  background-color: #444; 
+  font-weight: 600;
+  text-align: left;
+}
