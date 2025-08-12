@@ -1,11 +1,10 @@
-// src/components/MarkdownRenderer.jsx
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-import './markdown.css'; // This is where we'll put our styles
+import './markdown.css';
 
 const components = {
   h1: ({ node, ...props }) => <h1 className="markdown-h1" {...props} />,
